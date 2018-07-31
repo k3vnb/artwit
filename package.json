@@ -1,0 +1,14 @@
+{
+  "name": "artwit",
+  "version": "1.0.0",
+  "description": "twitterbot with generative art",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Boyle",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
