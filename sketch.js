@@ -1,15 +1,32 @@
-console.log('weird');
+console.log('running sketch.js');
+
 
 var Twit = require('twit');
 var config = require('./config');
-console.log(config);
+
 
 var T = new Twit(config);
 
-T.post('statuses/update', { status: 'hello world!' }, function(err, data, response) {
-  console.log(data)
-});
+tweetBot;
+setInterval(tweetBot, 1000*60*5*25);
 
-T.get('search/tweets', { q: 'banana since:2018-07-31', count: 3 }, function(err, data, response) {
-  console.log(data)
-})
+function tweetBot(){
+  let r = Math.floor(Math.random()*100);
+  let tweet = {
+  status: r
+}
+  T.post('statuses/update', tweet, function(err, data, response) {
+    if (err){
+      console.log("Post Unsuccessfull");
+    } else {
+      console.log("Status Posted Successfully");
+    }
+  });
+
+}
+
+
+
+// T.get('search/tweets', { q: 'banana since:2018-07-31', count: 3 }, function(err, data, response) {
+//   console.log(data)
+// })
