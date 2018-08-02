@@ -6,7 +6,7 @@ var config = require('./config');
 var exec = require('child_process').exec;
 var fs = require('fs');
 
-let r = Math.floor(Math.random()*100);
+
 
 
 var T = new Twit(config);
@@ -15,6 +15,7 @@ tweetBot();
 setInterval(tweetBot, 1000*50);
 
 function tweetBot(){
+  let r = Math.floor(Math.random()*100);
   var cmd = 'processing-java --sketch=`pwd`/test1 --run';
   exec(cmd, processing);
 
