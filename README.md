@@ -2,8 +2,6 @@
 
 ## Posting Generative Art to Twitter
 
-After cloning project:
+Node based, interacts with Processing for rendering images based on recursive & repetitive algorithm with random elements.
 
-``npm init``
-
-Apply for dev account w/ Twitter, get necessary OAuth tokens, add to config.js file
+### _Kevin Boyle_ Aug 2018

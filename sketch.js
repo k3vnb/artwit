@@ -12,12 +12,12 @@ var fs = require('fs');
 var T = new Twit(config);
 
 tweetBot();
-setInterval(tweetBot, 1000*60*60);
+setInterval(tweetBot, 1000*60);
 
 function tweetBot(){
   let r = Math.floor(Math.random()*100);
-  let r1 = Math.floor(Math.random()*23);
-  let x = ['a', 'b', 'c', 'd', 'e','f', 'g', 'j', 'l', 'L', 'm', 'beta', 'boogie', 'carta', 'theta', 'svedanya','aster', '12', 'tango', 'hello', 'lula', 'iris'];
+  let r1 = Math.floor(Math.random()*28);
+  let x = ['a', 'b', 'c', 'd', 'e','f', 'g', 'j', 'l', 'L', 'm', ' beta', ' boogie', ' carta', ' theta', ' svedanya',' aster', ' adin', ' tango', ' hello', ' lula', ' iris', ' rum', ' blur', ' coco', ' fleur', ' ajo'];
   var cmd = 'processing-java --sketch=`pwd`/test1 --run';
   exec(cmd, processing);
 
@@ -34,7 +34,7 @@ function tweetBot(){
       //this is where i will tweet!
       var id = data.media_id_string;
       let tweet = {
-        status: 'tropic' + r + ' ' + x[r1],
+        status: 'tropic' + r + x[r1],
         media_ids: [id]
       }
       T.post('statuses/update', tweet, tweeted);
@@ -48,10 +48,3 @@ function tweetBot(){
     }
   }
 }
-
-
-
-
-// T.get('search/tweets', { q: 'banana since:2018-07-31', count: 3 }, function(err, data, response) {
-//   console.log(data)
-// })
