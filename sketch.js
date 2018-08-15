@@ -12,12 +12,13 @@ var fs = require('fs');
 var T = new Twit(config);
 
 tweetBot();
-setInterval(tweetBot, 1000*60);
+setInterval(tweetBot, 1000*60*15);
 
 function tweetBot(){
   let r = Math.floor(Math.random()*100);
-  let r1 = Math.floor(Math.random()*28);
-  let x = ['a', 'b', 'c', 'd', 'e','f', 'g', 'j', 'l', 'L', 'm', ' beta', ' boogie', ' carta', ' theta', ' svedanya',' aster', ' adin', ' tango', ' hello', ' lula', ' iris', ' rum', ' blur', ' coco', ' fleur', ' ajo'];
+  let r1 = Math.floor(Math.random()*32);
+  let x = [' #bloom', ' #blonde', ' #claro', ' #dance', ' #enoch',' #flannel', ' #grande', ' #jarr', ' #lore', ' #Le', ' #macabre', ' #beta', ' #boogie', ' #carta', ' #theta', ' #svedanya',' #aster', ' #adin', ' #tango', ' #helo', ' #lula', ' #iris', ' #rum', ' #blur', ' #coco', ' #fleur', ' #ajo', ' #jacko', ' #hoopla', ' #snacko', ' #sloop', ' #beltloops', ' #swill'];
+
   var cmd = 'processing-java --sketch=`pwd`/test1 --run';
   exec(cmd, processing);
 

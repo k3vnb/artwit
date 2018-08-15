@@ -59,7 +59,7 @@ void branch(float h) {
     branch(h);       // Ok, now call myself to draw two new branches!!
 
     popMatrix();     // Whenever we get back here, we "pop" in order to restore the previous matrix state
-    
+
     // Repeat the same thing, only branch off to the "left" this time!
     pushMatrix();
     rotate(-angle * .0009);
@@ -86,7 +86,7 @@ void branch2(float h) {
     translate(h, -h); // Move to the end of the branch
     branch(h);       // Ok, now call myself to draw two new branches!!
     popMatrix();     // Whenever we get back here, we "pop" in order to restore the previous matrix state
-    
+
     // Repeat the same thing, only branch off to the "left" this time!
     pushMatrix();
     rotate(-angle);
